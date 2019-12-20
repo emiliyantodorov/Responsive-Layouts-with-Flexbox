@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Demo Menus</title>
+    <!--    main css-->
+    <link rel="stylesheet" href="sass/style.css">
+    <!--    font awesome-->
+    <script src="https://kit.fontawesome.com/559b2f83ab.js" crossorigin="anonymous"></script>
+    <style>
+        .main-header {
+            background: white;
+        }
+
+        main {
+            background: goldenrod;
+        }
+        
+        footer {
+            background: slategrey;
+        }
+    </style>
+</head>
+<body>
+<!--MULTI LEVEL MENU START-->
+<header class="main-header">
+    <nav class="nav-bar">
+
+        <div class="mobile-nav-bar">
+            <a href="#" class="btn--mobile-menu">ICON</a>
+            <a href="#" class="logo logo--mobile">LOGO</a>
+        </div>
+
+        <div class="nav-wrapper">
+            <a href="#" class="logo logo--desktop">LOGO</a>
+
+            <ul class="nav">
+                <li class="nav__item">
+                    <a href="#" class="nav__link">Home</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#" class="nav__link btn-dropdown">
+                        Food
+                        <i class="fas fa-angle-down nav__icon"></i>
+                    </a>
+
+                    <ul class="inner-nav">
+                        <li class="inner-nav__item">
+                            <a href="#" class="inner-nav__link">
+                                Catering
+                            </a>
+                        </li>
+                        <li class="inner-nav__item">
+                            <a href="#" class="inner-nav__link">
+                                Restaurants
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav__item">
+                    <a href="#" class="nav__link">About</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#" class="nav__link">Contact</a>
+                </li>
+            </ul>
+        </div>
+
+    </nav>
+    <section class="jumbotron">
+            <h1 class="heading-primary">JUMBOTRON</h1>
+    </section>
+</header>
+<!--END OF MULTI LEVEL MENU-->
+
+<main>
+    MAIN
+    <br>
+    <br>
+    <br>
+</main>
+
+<footer>
+    FOOTER
+</footer>
+<!--SCRIPTS-->
+<script src="app.js"></script>
+</body>
+</html>

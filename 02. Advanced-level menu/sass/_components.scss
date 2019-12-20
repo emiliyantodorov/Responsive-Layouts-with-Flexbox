@@ -1,0 +1,116 @@
+/*SINGLE LEVEL MENU*/
+
+.mobile-nav-bar {
+  background: $black;
+  padding: 1.8rem;
+  display: flex;
+  justify-content: space-between;
+
+  @include for-breakpoint(lg) {
+    display: none;
+  }
+}
+
+.btn--mobile-menu {
+  color: $white;
+}
+
+.logo {
+  color: $mediumGreen;
+  font-weight: bolder;
+}
+
+.nav-wrapper {
+  @include for-breakpoint(lg) {
+    display: flex;
+    flex-flow: row wrap;
+    background-color: $black;
+    justify-content: space-between;
+  }
+}
+
+.logo--desktop {
+  display: none;
+
+  @include for-breakpoint(lg) {
+    flex: 1 0 100%;
+    display: inline;
+    align-self: center;
+    text-align: center;
+    font-size: 2rem;
+    padding: 2rem 0;
+  }
+}
+
+.nav {
+  display: flex;
+  flex-flow: column;
+  overflow: hidden;
+  background-color: rgba($black, .5);
+  height: 0;
+  transition: all 1s;
+  box-shadow: 0 .1rem;
+
+  @include for-breakpoint(lg){
+    flex: 1 0 auto;
+    flex-flow: row wrap;
+    height: auto;
+    background-color: $black;
+    box-shadow: none;
+  }
+
+  &__item {
+    flex: 1 0 auto;
+
+    @include for-breakpoint(lg){
+      text-align: center;
+    }
+  }
+
+  &__link {
+
+    &:link,
+    &:visited {
+      @extend %styleBaseLink;
+      display: flex;
+      flex-flow: row;
+    }
+
+    &:hover {
+      background-color: $mediumGreen;
+    }
+
+    &:hover .nav__icon {
+      transform: scale(1.2);
+    }
+
+    &:active {
+      background-color: $darkGreen;
+    }
+  }
+
+  &__icon {
+     transition: all .2s;
+  }
+
+  &__text {
+     text-align: left;
+    margin-left: 1rem;
+    font-size: 2rem;
+  }
+
+  &__description {
+    font-style: italic;
+    display: block;
+    font-size: 1.4rem;
+  }
+}
+
+.addFullHeight {
+  height: 30.4rem;
+  
+  @include for-breakpoint(lg) {
+    height: auto;
+  }
+}
+

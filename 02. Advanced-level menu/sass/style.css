@@ -1,0 +1,167 @@
+/*VARIABLES*/
+/*RESET*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/*BASE*/
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  font-size: 1.7rem;
+  color: #333;
+  background-color: #bababa;
+}
+
+a {
+  text-decoration: none;
+  outline: none;
+}
+
+ul {
+  list-style: none;
+}
+
+.centered {
+  margin: auto;
+  max-width: 110rem;
+}
+
+/*TYPOGRAPHY*/
+.heading-secondary {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+/*UTILITIES*/
+.p-6 {
+  padding: 6rem;
+}
+
+.mb-3 {
+  margin-bottom: 3rem;
+}
+
+/*PLACEHOLDERS*/
+.nav__link:link, .nav__link:visited {
+  display: block;
+  color: #fff;
+  padding: 1.8rem;
+  transition: all 0.2s;
+}
+
+/*SINGLE LEVEL MENU*/
+.mobile-nav-bar {
+  background: #333;
+  padding: 1.8rem;
+  display: flex;
+  justify-content: space-between;
+}
+@media (min-width: 992px) {
+  .mobile-nav-bar {
+    display: none;
+  }
+}
+
+.btn--mobile-menu {
+  color: #fff;
+}
+
+.logo {
+  color: #00a400;
+  font-weight: bolder;
+}
+
+@media (min-width: 992px) {
+  .nav-wrapper {
+    display: flex;
+    flex-flow: row wrap;
+    background-color: #333;
+    justify-content: space-between;
+  }
+}
+
+.logo--desktop {
+  display: none;
+}
+@media (min-width: 992px) {
+  .logo--desktop {
+    flex: 1 0 100%;
+    display: inline;
+    align-self: center;
+    text-align: center;
+    font-size: 2rem;
+    padding: 2rem 0;
+  }
+}
+
+.nav {
+  display: flex;
+  flex-flow: column;
+  overflow: hidden;
+  background-color: rgba(51, 51, 51, 0.5);
+  height: 0;
+  transition: all 1s;
+  box-shadow: 0 0.1rem;
+}
+@media (min-width: 992px) {
+  .nav {
+    flex: 1 0 auto;
+    flex-flow: row wrap;
+    height: auto;
+    background-color: #333;
+    box-shadow: none;
+  }
+}
+.nav__item {
+  flex: 1 0 auto;
+}
+@media (min-width: 992px) {
+  .nav__item {
+    text-align: center;
+  }
+}
+.nav__link:link, .nav__link:visited {
+  display: flex;
+  flex-flow: row;
+}
+.nav__link:hover {
+  background-color: #00a400;
+}
+.nav__link:hover .nav__icon {
+  transform: scale(1.2);
+}
+.nav__link:active {
+  background-color: #009000;
+}
+.nav__icon {
+  transition: all 0.2s;
+}
+.nav__text {
+  text-align: left;
+  margin-left: 1rem;
+  font-size: 2rem;
+}
+.nav__description {
+  font-style: italic;
+  display: block;
+  font-size: 1.4rem;
+}
+
+.addFullHeight {
+  height: 30.4rem;
+}
+@media (min-width: 992px) {
+  .addFullHeight {
+    height: auto;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

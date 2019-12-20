@@ -1,0 +1,85 @@
+/*VARIABLES*/
+$white: #fff;
+$black: #333;
+$lightGrey: #bababa;
+
+$mediumGreen: #00a400;
+$lightGreen: lighten($mediumGreen, 10%);
+$darkGreen: darken($mediumGreen, 4%);
+
+/*RESET*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/*BASE*/
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  font-size: 1.7rem;
+  color: $black;
+  background-color: $lightGrey;
+  display: flex;
+  flex-flow: column;
+  min-height: 100vh;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1 0 auto;
+}
+
+footer {
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+  outline: none;
+}
+
+ul {
+  list-style: none;
+}
+
+.centered {
+  margin: auto;
+  max-width: 110rem;
+}
+
+/*TYPOGRAPHY*/
+.heading-secondary {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+/*UTILITIES*/
+.p-6 {
+  padding: 6rem;
+}
+
+.mb-3 {
+  margin-bottom: 3rem;
+}
+
+
+/*PLACEHOLDERS*/
+%styleBaseLink {
+  display: block;
+  color: $white;
+  padding: 1.8rem;
+  transition: all .2s;
+}
+
+
+
+

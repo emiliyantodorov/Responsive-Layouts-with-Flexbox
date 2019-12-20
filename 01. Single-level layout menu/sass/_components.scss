@@ -1,0 +1,92 @@
+/*SINGLE LEVEL MENU*/
+
+.mobile-nav-bar {
+  background: $black;
+  padding: 1.8rem;
+  display: flex;
+  justify-content: space-between;
+
+  @include for-breakpoint(lg) {
+    display: none;
+  }
+}
+
+.btn--mobile-menu {
+  color: $white;
+}
+
+.logo {
+  color: $mediumGreen;
+  font-weight: bolder;
+
+  &.logo--mobile {
+    @include for-breakpoint(lg) {
+      display: none;
+    }
+  }
+
+  &.logo--desktop {
+      display: none;
+
+    @include for-breakpoint(lg) {
+      display: inline-block;
+      align-self: center;
+      margin-left: 1.8rem;
+    }
+  }
+}
+
+.nav-wrapper {
+  @include for-breakpoint(lg) {
+    display: flex;
+    justify-content: space-between;
+    background-color: $black;
+  }
+}
+
+.nav {
+  display: flex;
+  flex-flow: column;
+  overflow: hidden;
+  background-color: rgba($black, .5);
+  height: 0;
+  transition: all 1s;
+  box-shadow: 0 .1rem ;
+
+  @include for-breakpoint(lg) {
+    flex-flow: row wrap;
+    box-shadow: none;
+    height: auto;
+  }
+  
+  &__item {
+    flex: 1 0 auto;
+  }
+
+  &__link {
+
+    &:link,
+    &:visited {
+      @extend %styleBaseLink;
+    }
+
+    &:hover {
+      background-color: $mediumGreen;
+      padding-left: 5.5rem;
+      transform: scale(1.1);
+    }
+
+    &:active {
+      background-color: $darkGreen;
+    }
+  }
+}
+
+.addFullHeight {
+  height: 39.2rem;
+
+  @include for-breakpoint(lg) {
+    height: auto;
+  }
+}
+
